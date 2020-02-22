@@ -11,37 +11,37 @@ public class LinkedList {
         }
     }
 
-    public void push(int new_data){
-        Node new_node = new Node(new_data);
-        new_node.next = head;
-        head = new_node;
+    public void push(int newData){
+        Node newnode = new Node(newData);
+        newnode.next = head;
+        head = newnode;
     }
 
-    public void insertAfter(Node prev_node, int new_data){
-        if(prev_node == null){
+    public void insertAfter(Node prevnode, int newData){
+        if(prevnode == null){
             System.out.println("Previous node cannot be null");
             return;
         }
 
-        Node new_node = new Node(new_data);
-        new_node.next = prev_node.next;
-        prev_node.next = new_node;
+        Node newnode = new Node(newData);
+        newnode.next = prevnode.next;
+        prevnode.next = newnode;
     }
 
-    public void append(int new_data) {
-        Node new_node = new Node(new_data);
+    public void addToTheEnd(int newData) {
+        Node newnode = new Node(newData);
 
         if (head == null) {
-            head = new Node(new_data);
+            head = new Node(newData);
             return;
         }
 
-        new_node.next = null;
+        newnode.next = null;
         Node last = head;
 
         while (last.next != null) last = last.next;
 
-        last.next = new_node;
+        last.next = newnode;
         return;
     }
 
